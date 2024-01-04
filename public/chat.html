@@ -2,7 +2,6 @@
 <html>
 
 <head>
-<<<<<<< HEAD
     <meta name="viewport" content= "width=device-width, user-scalable=no">
     <title>Chat App</title>
     <link rel="icon" href="/img/favicon.png">
@@ -28,74 +27,33 @@
                     </form>
                     <button id="send-location">Send location</button>
                 </div>
-=======
-    <title>Chat App</title>
-    <link rel="icon" href="/img/favicon.png">
-    <link rel="stylesheet" href="/css/styles.min.css">
-</head>
-
-<body>
-    <div class="chat">
-        <div id="sidebar" class="chat__sidebar">
-
-        </div>
-        <div class="chat__main">
-            <div id="messages" class="chat__messages"></div>
-
-            <div class="compose">
-                <form id="message-form">
-                    <input name="message" placeholder="Message" required autocomplete="off">
-                    <button>Send</button>
-                </form>
-                <button id="send-location">Send location</button>
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
             </div>
         </div>
     </div>
 
     <script id="message-template" type="text/html">
             <div class="message">
-<<<<<<< HEAD
                 <p class="sender">
                     <span class="message__name">{{username}}</span>
                     <span class="message__meta">{{createdAt}}</span>
                 </p>
                 <p class="msg">{{message}}</p>
-=======
-                <p>
-                    <span class="message__name">{{username}}</span>
-                    <span class="message__meta">{{createdAt}}</span>
-                </p>
-                <p>{{message}}</p>
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
             </div>
         </script>
 
     <script id="location-message-template" type="text/html">
             <div class="message">
-<<<<<<< HEAD
                 <p class="sender">
                     <span class="message__name">{{username}}</span>
                     <span class="message__meta">{{createdAt}}</span>
                 </p>
                 <p class="msg"><a href="{{url}}" target="_blank">My current location</a></p>
-=======
-                <p>
-                    <span class="message__name">{{username}}</span>
-                    <span class="message__meta">{{createdAt}}</span>
-                </p>
-                <p><a href="{{url}}" target="_blank">My current location</a></p>
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
             </div>
         </script>
 
     <script id="sidebar-template" type="text/html">
         <h2 class="room-title">{{room}}</h2>
-<<<<<<< HEAD
         <h3 class="list-title">Users :-</h3>
-=======
-        <h3 class="list-title">Users</h3>
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
         <ul class="users">
             {{#users}}
                 <li>{{username}}</li>

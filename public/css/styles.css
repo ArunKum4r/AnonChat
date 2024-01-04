@@ -22,29 +22,18 @@ body {
 
 h1 {
     margin-bottom: 16px;
-<<<<<<< HEAD
     text-align: center;
-=======
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
 }
 
 label {
     display: block;
     font-size: 14px;
     margin-bottom: 8px;
-<<<<<<< HEAD
-    color: black;
-}
-
-input {
-    border: 1px solid black;
-=======
     color: #777;
 }
 
 input {
     border: 1px solid #eeeeee;
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
     padding: 12px;
     outline: none;
 }
@@ -52,7 +41,6 @@ input {
 button {
     cursor: pointer;
     padding: 12px;
-<<<<<<< HEAD
     background-color: black;
     border-radius: 10px;
     border: none;
@@ -62,17 +50,6 @@ button {
 
 button:hover {
     background: #1f1f1f;
-=======
-    background: #7C5CBF;
-    border: none;
-    color: white;
-    font-size: 16px;
-    transition: background .3s ease;
-}
-
-button:hover {
-    background: #6b47b8;
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
 }
 
 button:disabled {
@@ -82,7 +59,6 @@ button:disabled {
 
 /* Join Page Styles */
 
-<<<<<<< HEAD
 .logo strong {
     font-size: 40px;
     font-weight: 900;
@@ -106,13 +82,6 @@ button:disabled {
     height: 100vh;   
     display: flex;
     flex-direction: column;
-=======
-.centered-form {
-    background: #333744;
-    width: 100vw;
-    height: 100vh;   
-    display: flex;
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
     justify-content: center;
     align-items: center;
 }
@@ -142,15 +111,9 @@ button:disabled {
 .chat__sidebar {
     height: 100vh;
     color: white;
-<<<<<<< HEAD
     background: #444444;
     width: 225px;
     overflow-y: scroll;
-=======
-    background: #333744;
-    width: 225px;
-    overflow-y: scroll
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
 }
 
 /* Chat styles */
@@ -162,15 +125,12 @@ button:disabled {
     max-height: 100vh;
 }
 
-<<<<<<< HEAD
 .room {
     font-size: 1rem;
     text-align: center;
     margin: 0;
 }
 
-=======
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
 .chat__messages {
     flex-grow: 1;
     padding: 24px 24px 0 24px;
@@ -190,11 +150,7 @@ button:disabled {
 }
 
 .message__meta {
-<<<<<<< HEAD
     color: #535353;
-=======
-    color: #777;
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
     font-size: 14px;
 }
 
@@ -202,7 +158,6 @@ button:disabled {
     color: #0070CC;
 }
 
-<<<<<<< HEAD
 .msg {
     background: lightgray;
     padding: 3px;
@@ -232,19 +187,12 @@ i {
     bottom: 10px;
     width: calc(100% - 225px) !important;
 }
-=======
-/* Message Composition Styles */
-
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
 .compose {
     display: flex;
     flex-shrink: 0;
     margin-top: 16px;
     padding: 24px;
-<<<<<<< HEAD
     gap: 0;
-=======
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
 }
 
 .compose form {
@@ -254,12 +202,8 @@ i {
 }
 
 .compose input {
-<<<<<<< HEAD
     border: 1px solid black;
     border-radius: 10px;
-=======
-    border: 1px solid #eeeeee;
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
     width: 100%;
     padding: 12px;
     margin: 0 16px 0 0;
@@ -274,14 +218,9 @@ i {
 
 .room-title {
     font-weight: 400;
-<<<<<<< HEAD
     font-size: 1.5rem;
     text-transform: capitalize;
     background: black;
-=======
-    font-size: 22px;
-    background: #2c2f3a;
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
     padding: 24px;   
 }
 
@@ -296,7 +235,6 @@ i {
     list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
-<<<<<<< HEAD
 }
 
 .hide {
@@ -351,6 +289,4 @@ i {
         font-style: 0.7rem;
         padding: 0;
     }
-=======
->>>>>>> 6dbb6a3a1b491fe968c0ad9517147abb10507e23
 }
