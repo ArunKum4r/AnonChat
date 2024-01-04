@@ -23,6 +23,13 @@ const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
+const messagesContainer = document.getElementById("messages");
+
+// Function to scroll the messages container to the bottom
+function scrollToBottom() {
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
 socket.on("message", (message) => {
   console.log(message);
   const html = Mustache.render(messageTemplate, {
@@ -30,6 +37,7 @@ socket.on("message", (message) => {
     message: message.text,
     createdAt: moment(message.createdAt).format("h:mm a"),
   });
+  scrollToBottom();
   $messages.insertAdjacentHTML("beforeend", html);
 });
 
@@ -40,6 +48,7 @@ socket.on("locationMessage", (message) => {
     url: message.url,
     createdAt: moment(message.createdAt).format("h:mm a"),
   });
+  scrollToBottom();
   $messages.insertAdjacentHTML("beforeend", html);
 });
 
@@ -59,43 +68,48 @@ menu.addEventListener("click", () => {
   roomTitle.classList.toggle("hide");
 });
 
-$messageForm.addEventListener('submit', (e) => {
-    e.preventDefault()
+$messageForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    $messageFormButton.setAttribute('disabled', 'disabled')
+  $messageFormButton.setAttribute("disabled", "disabled");
 
-    const message = e.target.elements.message.value
+  const message = e.target.elements.message.value;
 
-    socket.emit('sendMessage', message, (error) => {
-        $messageFormButton.removeAttribute('disabled')
-        $messageFormInput.value = ''
-        $messageFormInput.focus()
+  socket.emit("sendMessage", message, (error) => {
+    $messageFormButton.removeAttribute("disabled");
+    $messageFormInput.value = "";
+    $messageFormInput.focus();
 
-        if (error) {
-            return console.log(error)
-        }
-
-        console.log('Message delivered!')
-    })
-})
-
-$sendLocationButton.addEventListener('click', () => {
-    if (!navigator.geolocation) {
-        return alert('Geolocation is not supported by your browser.')
+    if (error) {
+      return console.log(error);
     }
+    scrollToBottom();
+    console.log("Message delivered!");
+  });
+});
 
-    $sendLocationButton.setAttribute('disabled', 'disabled')
+$sendLocationButton.addEventListener("click", () => {
+  if (!navigator.geolocation) {
+    return alert("Geolocation is not supported by your browser.");
+  }
 
-    navigator.geolocation.getCurrentPosition((position) => {
-        socket.emit('sendLocation', {
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude
-        }, () => {
-            $sendLocationButton.removeAttribute('disabled')
-            console.log('Location shared!')  
-        })
-    })
-})
+  $sendLocationButton.setAttribute("disabled", "disabled");
+
+  navigator.geolocation.getCurrentPosition((position) => {
+    socket.emit(
+      "sendLocation",
+      {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+      },
+      () => {
+        $sendLocationButton.removeAttribute("disabled");
+        console.log("Location shared!");
+        scrollToBottom();
+      }
+    );
+  });
+});
 
 socket.emit('join', { username, room }, (error) => {
     if (error) {

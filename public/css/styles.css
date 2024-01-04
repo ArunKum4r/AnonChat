@@ -133,8 +133,9 @@ button:disabled {
 
 .chat__messages {
     flex-grow: 1;
-    padding: 24px 24px 0 24px;
+    padding: 24px 24px 24px 24px;
     overflow-y: scroll;
+    margin-bottom: 80px;
 }
 
 /* Message Styles */
